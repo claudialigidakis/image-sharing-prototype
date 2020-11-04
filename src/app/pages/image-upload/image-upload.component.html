@@ -1,13 +1,15 @@
-<form>
-    <div class="form-group">
-        <div class="custom-file">
-            <input type="file" class="custom-file-input" formControlName="image" id="customFile">
-            <label class="custom-file-label" for="customFile" (click)="fileInput.click()">Select Image</label>
-          </div>
-    </div>
-    <div class="form-group">
-      <label for="ref_key">Ref Key</label>
-      <input class="form-control" formControlName="ref_link" id="ref_key">
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="onUpload()">Submit</button>
-  </form>
+<div class="container-fluid">
+    <form [formGroup]='postUpload'>
+        <div class="form-group">
+            <div class="custom-file">
+                <input #file type="file" class="custom-file-input" formControlName="image" id="customFile">
+                <label class="custom-file-label" for="customFile" (click)="file.click()">Select Image</label>
+              </div>
+        </div>
+        <div class="form-group">
+          <label for="ref_key">Ref Key</label>
+          <input class="form-control" formControlName="ref_key" id="ref_key">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onUpload()">Submit</button>
+      </form>
+</div>

@@ -1,15 +1,12 @@
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" class="text-left">
-        Image Sharing
-    </a>
-  </nav>
-<p>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#imageUpload" aria-expanded="false" aria-controls="collapseExample">
-        Upload Image
-    </button>
-</p>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd; justify-content: space-between;">
+        <a class="navbar-brand">Image Sharing</a>
+        <form class="form-inline">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#imageUpload" aria-expanded="false" aria-controls="collapseExample">
+                Upload Image
+            </button>
+        </form>
+    </nav>
 <div class="collapse" id="imageUpload">
     <app-image-upload></app-image-upload>
 </div>
-
 <app-post-list></app-post-list>

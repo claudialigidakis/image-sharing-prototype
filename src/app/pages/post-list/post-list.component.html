@@ -1,4 +1,8 @@
-<div class="text-center" *ngFor="let image of posts">
-    <img src="{{image.picture}}" class="rounded">
-    <span>{{image.ref_key}}</span>
+<div class="card-columns">
+        <div class="card bg-dark text-white" style="width: 25rem; margin: 2em;" *ngFor="let post of posts">
+            <img src="{{post.picture}}" class="card-img" alt="{{post.ref_key}}">
+            <div class="card-img-overlay">
+                <h5 class="card-title">{{post.ref_key}}</h5>
+            </div>
+        </div>
 </div>

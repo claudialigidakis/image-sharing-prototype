@@ -8,21 +8,21 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
   styleUrls: ['./image-upload.component.scss']
 })
 export class ImageUploadComponent {
-
   postUpload = new FormGroup({
     image: new FormControl(null),
-    ref_link: new FormControl(null)
+    ref_key: new FormControl(null)
   });  
 
     constructor(
       private http: HttpClient,
       private fb: FormBuilder
-      ){}
+    ){ }
 
     onUpload() {
-      this.http.post('/posts/', this.postUpload.value)
-        .subscribe(() => {
-          console.log("done")
+      console.log(this.postUpload);
+      this.http.post('http://localhost:5000/posts', this.postUpload.value)
+        .subscribe((res) => {
+          console.log(res);
         })
     }
   }
